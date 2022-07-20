@@ -74,10 +74,12 @@ export default {
   },
   methods: {
     formatDateAssigned(value) {
+      if (value){
       const formattedDate = DateTime.fromISO(
         value
-      ).toLocaleString(DateTime.DATETIME_SHORT);
-      return formattedDate;
+      ).toLocaleString(DateTime.DATE_FULL);
+      return formattedDate;}
+      else return "";
     }
   
   },
